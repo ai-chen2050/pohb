@@ -8,12 +8,12 @@ $ cargo run --bin network -- task.json
 
 The `task.json` is used by the consensus policy e.g. smart contract to verify task results before working on it for consensus.
 
-Open three more shells, run a computation node for each stage of the computation (specified in `task.json`) in each of them
+Open three more shells, run a computation node for each stage of the computation (specified in `task.json`) in each of them.
 
 ```
-$ cargo run --bin compute -- rand
-$ cargo run --bin compute -- prod
-$ cargo run --bin compute -- hash
+$ cargo run --bin compute -- task.json rand
+$ cargo run --bin compute -- task.json prod
+$ cargo run --bin compute -- task.json hash
 ```
 
 Open one last shell and submit a computation task
